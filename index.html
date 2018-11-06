@@ -10,13 +10,33 @@
 </head>
 
 <body>
-	<header></header>
+	<header>
+		<form>
+			<input type="search" class="search" placeholder="Search"><input type="submit" class="submit" value="百度一下">
+		</form>
+	</header>
 	<main>
 		<div class="wrapper" id="main"></div>
 	</main>
-	<footer></footer>
 
 	<script>
+		//header部分
+		let input = document.querySelector('.search')
+		input.addEventListener('keypress', function (e) {
+			e.stopPropagation() // 阻止事件冒泡，因为document监听了keypress
+		})
+		var Baidu = document.querySelector('.submit')
+		Baidu.addEventListener('click', function (e) {
+			e.preventDefault() // 阻止默认动作
+			if (input.value !== '') {
+				var url = `http://www.baidu.com/s?wd=${input.value}`
+				window.open(url, '_black')
+			} else {
+				input.focus()
+			}
+
+		})
+
 		// 1.初始化数据
 		var hashA = init()
 		var keys = hashA['keys']

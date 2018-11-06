@@ -1,76 +1,108 @@
 * {
-    margin: 0;
-    padding: 0;
-}
-body{
-	background: grey  url(./wall.jpg) no-repeat center center;
-	background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: grey url(./wall.jpg) no-repeat center center;
+  background-size: cover;
+}
 
-main {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    text-align: center;
+header {
+  margin-bottom: 60px;
+}
+
+header form input {
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+header form .search {
+  width: 380px;
+  border-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-right-color: transparent;
+  padding-left: 10px;
+  outline: none;
+}
+
+header form .submit {
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(66, 115, 249);
+  border: none;
+  outline: none;
 }
 
 .wrapper {
-	display: inline-block;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .wrapper>div:nth-child(2) {
-    margin-left: -22px;
+  margin-left: -22px;
 }
 
 .wrapper>div:nth-child(3) {
-    margin-left: -80px;
+  margin-left: -80px;
 }
-.row{
-	margin: 20px; 
+
+.row {
+  margin: 20px;
 }
 
 .key {
-	display: inline-block;
-	width: 60px;
-	height: 48px;
-	text-transform: uppercase;
-	margin: 0 10px;
-	position: relative;
-    background: linear-gradient(to bottom, #292929 0%, #111111 100%);
-    color: #C5C5C5;
-    border-radius: 6px;
-    box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 0 2px #080808;
-    font-size: 16px;
-    font-family: Helvetica;
+  display: inline-block;
+  width: 60px;
+  height: 48px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  position: relative;
+  background: linear-gradient(to bottom, #292929 0%, #111111 100%);
+  color: #C5C5C5;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 0 2px #080808;
+  font-size: 16px;
+  font-family: Helvetica;
 }
 
 .key>button {
-	display: none;
-    position: absolute;
-    right: 0;
-	bottom: 2px;
-	padding: 0 2px;
-	font-size: 12px;
-    border-radius: 2px;
-    border: none;
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  padding: 0 2px;
+  font-size: 12px;
+  border-radius: 2px;
+  border: none;
 }
 
 .key:hover>button {
-    display: inline-block;
+  display: inline-block;
 }
-.key>img{
-	width: 16px; 
-	height: 16px; 
-	position: absolute; 
-	left: 4px; 
-	bottom: 2px;
+
+.key>img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
 }
-.key>.text{
-	position: absolute;
-	top: 6px;
-	left: 24px;
+
+.key>.text {
+  position: absolute;
+  top: 6px;
+  left: 24px;
 }
